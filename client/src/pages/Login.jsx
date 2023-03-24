@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from 'react-redux';
 import { hideLoading, showLoading } from '../redux/alertsSlice';
-import "../resources/auth.css"
+import "../resources/auth.css";
 
 
 
@@ -21,7 +21,8 @@ const dispatch = useDispatch();
             if(response.data.success){
                 message.success(response.data.message);
                 localStorage.setItem("token",response.data.data);
-                navigate("/");
+                // navigate("/");
+                window.location.href = "/"
             }else{
                 message.error(response.data.message);
             }

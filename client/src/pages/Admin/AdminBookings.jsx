@@ -1,6 +1,6 @@
 import { message, Table, Modal } from 'antd';
 import React, { useEffect, useRef, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import PageTitle from '../../components/PageTitle';
 import { axiosInstance } from '../../helpers/axiosInstance';
 import { hideLoading, showLoading } from '../../redux/alertsSlice';
@@ -11,6 +11,9 @@ function AdminBookings() {
     const [showPrintModal, setShowPrintModal] = useState(false);
     const [selectedBooking, setSelectedBooking] = useState(null);
     const [bookings, setBookings] = useState([]);
+
+    const {user} = useSelector(state =>state.users);
+    console.log(user);
 
     const getBookings = async () => {
         try {

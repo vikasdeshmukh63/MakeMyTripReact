@@ -39,7 +39,7 @@ function Profile() {
 
     return (
         <div>
-            <div className="d-flex justufy-content-between my-3">
+            <div className="d-flex justify-content-between my-3">
                 <PageTitle title="Profile" />
             </div>
             <div className='card-2 p-3 mt-3'>

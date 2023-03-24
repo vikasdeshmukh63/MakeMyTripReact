@@ -48,6 +48,11 @@ function DefaultLayout({ children }) {
         {
             name: "Users",
             path: "/admin/users",
+            icon: "ri-folder-user-line"
+        },
+        {
+            name: "Profile",
+            path: "/profile",
             icon: "ri-user-3-line"
         },
         {
